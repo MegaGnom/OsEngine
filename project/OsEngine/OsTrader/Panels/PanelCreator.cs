@@ -1631,16 +1631,15 @@ namespace OsEngine.OsTrader.Panels
         private decimal _lastBolDown;
         private void TradeLogic(List<Candle> candles)
         {
-            _lastPrice = candles[candles.Count - 1].Close;
-            _lastBolUp = _bol.ValuesUp[_bol.ValuesUp.Count - 1];
-            _lastBolDown = _bol.ValuesDown[_bol.ValuesDown.Count - 1];
-
-           
-
             if (_bol.ValuesUp == null)
             {
                 return;
             }
+
+            _lastPrice = candles[candles.Count - 1].Close;
+            _lastBolUp = _bol.ValuesUp[_bol.ValuesUp.Count - 1];
+            _lastBolDown = _bol.ValuesDown[_bol.ValuesDown.Count - 1];
+
             if (_bol.ValuesUp.Count < _bol.Lenght + 5)
             {
                 return;

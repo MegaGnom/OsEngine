@@ -37,11 +37,11 @@ namespace OsEngine.OsTrader.Panels.PanelsGui
         {
             try
             {
-                if (Convert.ToInt32(TextBoxVolumeOne.Text) <= 0 || 
+                if (Convert.ToInt32(TextBoxVolumeOne.Text) <= 0 ||  //BUG сравниваются одинаковые значения
                     Convert.ToInt32(RsiUp.Text) <= 0 || 
                     Convert.ToInt32(RsiDown.Text) <= 0 ||
                     Convert.ToDecimal(TextBoxSlipage.Text) < 0 ||
-                    Convert.ToInt32(TextBoxVolumeOne.Text) <= 0)
+                    Convert.ToInt32(TextBoxVolumeOne.Text) <= 0)   //BUG сравниваются одинаковые значения
                 {
                     throw new Exception("");
                 }

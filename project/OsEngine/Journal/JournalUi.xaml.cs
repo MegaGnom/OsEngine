@@ -1076,7 +1076,7 @@ namespace OsEngine.Journal
                 }
             }
 
-            float step = 100 / _chartVolume.ChartAreas.Count;
+            float step = 100f / _chartVolume.ChartAreas.Count;
 
             float y = 0;
 

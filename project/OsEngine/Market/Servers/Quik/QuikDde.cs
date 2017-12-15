@@ -148,7 +148,8 @@ namespace OsEngine.Market.Servers.Quik
                             }
                             else
                             {
-                                securities[i].State = securities[i].State = SecurityStateType.UnKnown;
+                            //securities[i].State = securities[i].State = SecurityStateType.UnKnown;//значение переменной присваивается само себе
+                            securities[i].State = SecurityStateType.UnKnown;
                             }
                         }
                         else
@@ -234,7 +235,7 @@ namespace OsEngine.Market.Servers.Quik
 
                         Security[] newArraySecurities = new Security[securities.Length-1];
 
-                        for (int i2 = 0; i2 < i; i++)
+                        for (int i2 = 0; i2 < i; i2++)
                         {
                             newArraySecurities[i2] = securities[i2];
                         }

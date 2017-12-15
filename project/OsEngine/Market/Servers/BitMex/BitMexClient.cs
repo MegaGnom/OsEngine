@@ -286,7 +286,7 @@ namespace OsEngine.Market.Servers.BitMex
                             {
                                 var quotes = JsonConvert.DeserializeAnonymousType(mes, new BitMexQuotes());
 
-                                if (UpdateMarketDepth != null && quotes.data.Count != 0 && quotes.data != null)
+                                if (UpdateMarketDepth != null && quotes.data != null  && quotes.data.Count != 0)
                                 {
                                     UpdateMarketDepth(quotes);
                                 }

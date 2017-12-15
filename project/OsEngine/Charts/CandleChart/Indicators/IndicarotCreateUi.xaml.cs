@@ -166,7 +166,7 @@ namespace OsEngine.Charts.CandleChart.Indicators
             {
                 TextBlockDescription.Text = "AO(Awesome Oscillator) - осциллятор показывающий скорость изменения цены.";
             }
-            if (_gridViewIndicators.SelectedCells[0].Value.ToString() == "Fractal" ||
+            if (_gridViewIndicators.SelectedCells[0].Value.ToString() == "Fractal" || //BUG сравниваются одинаковые значения
                 _gridViewIndicators.SelectedCells[0].Value.ToString() == "Fractal")
             {
                 TextBlockDescription.Text = "Fractal(Фрактал) - точки, обозначающие уровни поддержки и сопротивлений";

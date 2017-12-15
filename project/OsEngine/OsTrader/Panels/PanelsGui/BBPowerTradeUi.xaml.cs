@@ -45,8 +45,6 @@ namespace OsEngine.OsTrader.Panels.PanelsGui
                 {
                     throw new Exception("");
                 }
-                Convert.ToDecimal(TextBoxSlipage.Text);
-                Convert.ToDecimal(Step.Text);
             }
             catch (Exception)
             {

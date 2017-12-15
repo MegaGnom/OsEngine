@@ -41,14 +41,13 @@ namespace OsEngine.OsTrader.Panels.PanelsGui
             try
             {
 
-                if (Convert.ToInt32(TextBoxVolumeOne.Text) <= 0 ||
+                if (Convert.ToInt32(TextBoxVolumeOne.Text) <= 0 || //BUG сравниваются одинаковые значения
                     Convert.ToInt32(CciUp.Text) <= 0 ||
                     Convert.ToInt32(CciDown.Text) >= 0 ||
-                    Convert.ToInt32(TextBoxVolumeOne.Text) <= 0)
+                    Convert.ToInt32(TextBoxVolumeOne.Text) <= 0)   //BUG сравниваются одинаковые значения
                 {
                     throw new Exception("");
                 }
-                Convert.ToDecimal(TextBoxSlipage.Text);
             }
             catch (Exception)
             {

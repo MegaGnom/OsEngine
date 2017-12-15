@@ -42,7 +42,6 @@ namespace OsEngine.OsTrader.Panels.PanelsGui
                 {
                     throw new Exception("");
                 }
-                Convert.ToDecimal(TextBoxSlipage.Text);
             }
             catch (Exception)
             {

@@ -685,6 +685,11 @@ namespace OsEngine.OsOptimizer
         /// </summary>
         private void PaintTableTabsSimple()
         {
+            if (_gridTableTabsSimple == null)
+            {
+                return;
+            }
+
             if (_gridTableTabsSimple.InvokeRequired)
             {
                 _gridTableTabsIndex.Invoke(new Action(PaintTableTabsSimple));
@@ -694,10 +699,6 @@ namespace OsEngine.OsOptimizer
             List<SecurityTester> securities = _master.SecurityTester;
 
             if(securities == null)
-            {
-                return;
-            }
-            if (_gridTableTabsSimple == null)
             {
                 return;
             }
@@ -880,6 +881,11 @@ namespace OsEngine.OsOptimizer
         /// </summary>
         private void PaintTableTabsIndex()
         {
+            if (_gridTableTabsIndex == null)
+            {
+                return;
+            }
+
             if (_gridTableTabsSimple.InvokeRequired)
             {
                 _gridTableTabsIndex.Invoke(new Action(PaintTableTabsIndex));
@@ -888,10 +894,6 @@ namespace OsEngine.OsOptimizer
             List<SecurityTester> securities = _master.SecurityTester;
 
             if (securities == null)
-            {
-                return;
-            }
-            if (_gridTableTabsIndex == null)
             {
                 return;
             }

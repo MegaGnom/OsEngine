@@ -319,7 +319,7 @@ namespace OsEngine.OsOptimizer
 
             List<BotPanel> botsToOutOfSample = new List<BotPanel>();
 
-            EndOfFazeFiltration(botsInFaze, fazes[0], botsToOutOfSample);
+            EndOfFazeFiltration(botsInFaze, botsToOutOfSample);
 
 // 4 делаем форварды
 
@@ -447,7 +447,7 @@ namespace OsEngine.OsOptimizer
         /// <summary>
         /// фильтрация результатов в конце текущей фазы
         /// </summary>
-        private void EndOfFazeFiltration(List<BotPanel> bots, OptimizerFaze faze, List<BotPanel> botsToOutOfSample)
+        private void EndOfFazeFiltration(List<BotPanel> bots, List<BotPanel> botsToOutOfSample)
         {
             int startCount = bots.Count;
 
@@ -564,9 +564,9 @@ namespace OsEngine.OsOptimizer
                 {
                     ((StrategyParameterInt)bot.Parameters[i]).ValueInt = ((StrategyParameterInt)par).ValueInt;
                 }
-                else if (bot.Parameters[i].Type == StrategyParameterType.Bool)
+                else if (bot.Parameters[i].Type == StrategyParameterType.Decimal) //дублировало первое условие с типом bool 
                 {
-                    ((StrategyParameterBool)bot.Parameters[i]).ValueBool = ((StrategyParameterBool)par).ValueBool;
+                    ((StrategyParameterDecimal)bot.Parameters[i]).ValueDecimal = ((StrategyParameterDecimal)par).ValueDecimal;
                 }
             }
 // настраиваем вкладки

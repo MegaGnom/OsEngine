@@ -229,8 +229,8 @@ namespace OsEngine.OsTrader
         {
             try
             {
-                if (_activPanel != null && _tabBotNames.SelectedItem.ToString() == _activPanel.NameStrategyUniq ||
-                    _tabBotNames.SelectedItem == null)
+                if (_activPanel != null && _tabBotNames.SelectedItem == null ||
+                    _tabBotNames.SelectedItem.ToString() == _activPanel.NameStrategyUniq)
                 {
                     return;
                 }

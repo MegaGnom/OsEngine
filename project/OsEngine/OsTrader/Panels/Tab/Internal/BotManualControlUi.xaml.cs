@@ -78,14 +78,14 @@ namespace OsEngine.OsTrader.Panels.Tab.Internal
         {
             try
             {
-                if(Convert.ToInt32(TextBoxSecondToOpen.Text) <= 0 ||
+                if(Convert.ToInt32(TextBoxSecondToOpen.Text) <= 0 ||   //BUG сравниваются одинаковые значения
                     Convert.ToInt32(TextBoxSecondToClose.Text) <= 0 ||
                     Convert.ToInt32(TextBoxStopPercentLenght.Text) <= 0 ||
                     Convert.ToInt32(TextBoxSlipageStop.Text) <= 0 ||
                     Convert.ToInt32(TextBoxProfitPercentLenght.Text) <= 0 ||
                     Convert.ToInt32(TextBoxSlipageProfit.Text) <= 0 ||
                     Convert.ToInt32(TextBoxSetbackToClose.Text) <= 0 ||
-                    Convert.ToInt32(TextBoxSecondToOpen.Text) <= 0 ||
+                    Convert.ToInt32(TextBoxSecondToOpen.Text) <= 0 ||  //BUG сравниваются одинаковые значения
                     Convert.ToInt32(TextBoxSetbackToOpen.Text) <= 0 ||
                     Convert.ToInt32(TextBoxSlipageDoubleExit.Text) < -100)
                 {

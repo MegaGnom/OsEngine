@@ -377,7 +377,7 @@ namespace OsEngine.Charts.CandleChart.Indicators
 
             if (lastSwingInCalc >= 0)
             {
-                return (index - _swingBarArray[lastSwingInCalc])/Lenght;
+                return (index - Convert.ToDecimal(_swingBarArray[lastSwingInCalc]))/Lenght;
             }
 
             return 0;

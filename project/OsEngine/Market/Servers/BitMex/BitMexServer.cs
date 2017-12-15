@@ -817,7 +817,7 @@ namespace OsEngine.Market.Servers.BitMex
                     //_portfolios.Add(osPortf);
                     _portfolioToSend.Enqueue(_portfolios);                  
                 }
-                else
+                else //BUG действия в блоке else идентичны блоку 'then' 
                 {
                     
                     osPortf.ValueCurrent = portf.data[0].availableMargin;
